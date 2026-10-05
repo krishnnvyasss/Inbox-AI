@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inbox AI</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <h1>Inbox AI</h1>
+        <p>Portable AI conversation context</p>
+      </div>
+      <span id="platform" class="badge">—</span>
+    </header>
+
+    <button id="capture" class="primary">Capture Conversation</button>
+
+    <section id="stats" class="stats hidden">
+      <div><strong id="messageCount">0</strong><span>messages</span></div>
+      <div><strong id="charCount">0</strong><span>characters</span></div>
+    </section>
+
+    <p id="status" class="status">Open a supported AI chat and capture it.</p>
+
+    <label for="preview">JSON Preview</label>
+    <textarea id="preview" readonly placeholder="Captured JSON will appear here..."></textarea>
+
+    <div class="actions">
+      <button id="copy" disabled>Copy JSON</button>
+      <button id="download" disabled>Download JSON</button>
+    </div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

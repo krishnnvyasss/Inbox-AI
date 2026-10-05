@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Inbox AI",
+  "version": "1.0.0",
+  "description": "Capture the currently rendered AI conversation and export it as portable JSON.",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Inbox AI"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://gemini.google.com/*",
+        "https://claude.ai/*"
+      ],
+      "js": ["content/adapters.js", "content/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
